@@ -26,8 +26,8 @@ const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
 let jdNotify = true;//是否关闭通知，false打开通知推送，true关闭通知推送
 //IOS等用户直接用NobyDa的jd cookie
 let cookiesArr = [], cookie = '', message;
-let helpAuthor = false;
-const randomCount = $.isNode() ? 0 : 0;
+let helpAuthor = true;
+const randomCount = $.isNode() ? 0 : 5;
 const inviteCodes = [
   `f0RpMb0@ZE9wNI3jJrZUgBWHjyw@IBIzaO2zYv0792zcy3oV0qA@eU9YDYXzNJlOsDeWtC96`,
   `f0RpMb0@ZE9wNI3jJrZUgBWHjyw@IBIzaO2zYv0792zcy3oV0qA@eU9YDYXzNJlOsDeWtC96`
@@ -363,25 +363,26 @@ function taskUrl(functionId, body = {}) {
   }
 }
 
-function getAuthorShareCode() {
-  return new Promise(resolve => {
-    $.get({url: "https://raw.githubusercontent.com/lonma/JD/master/updatecash.json",headers:{
-        "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1 Edg/87.0.4280.88"
-      }}, async (err, resp, data) => {
-      $.authorCode = [];
-      try {
-        if (err) {
-        } else {
-          $.authorCode = JSON.parse(data)
-        }
-      } catch (e) {
-        $.logErr(e, resp)
-      } finally {
-        resolve();
-      }
-    })
-  })
-}
+// function getAuthorShareCode() {
+//  return new Promise(resolve => {
+//    $.get({url: "https://gitee.com/shylocks/updateTeam/raw/main/jd_cash.json",headers:{
+//        "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1 Edg/87.0.4280.88"
+//      }}, async (err, resp, data) => {
+//      $.authorCode = [];
+//      try {
+//        if (err) {
+//        } else {
+//          $.authorCode = JSON.parse(data)
+//        }
+//      } catch (e) {
+//       $.logErr(e, resp)
+//      } finally {
+//        resolve();
+//      }
+//    })
+//  })
+// }
+
 function TotalBean() {
   return new Promise(async resolve => {
     const options = {
