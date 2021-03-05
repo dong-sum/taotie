@@ -1365,7 +1365,7 @@ function shareCodesFormat() {
 }
 function requireConfig() {
   return new Promise(async resolve => {
-    await updateTuanIdsCDN('替换');
+    await updateTuanIdsCDN('https://raw.githubusercontent.com/lonma/JD/master/updatedream.json');
     if ($.tuanIdS && $.tuanIdS.tuanActiveId) {
       tuanActiveId = $.tuanIdS.tuanActiveId;
     }
