@@ -26,13 +26,13 @@ cron "20 8 * * *" script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd
 const $ = new Env('闪购盲盒');
 //Node.js用户请在jdCookie.js处填写京东ck;
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
-let appId = '1EFRRxA' , homeDataFunPrefix = 'interact_template', collectScoreFunPrefix = 'harmony', message = ''
+let appId = '1EFRXxg' , homeDataFunPrefix = 'interact_template', collectScoreFunPrefix = 'harmony', message = ''
 let lotteryResultFunPrefix = homeDataFunPrefix, browseTime = 6
 const inviteCodes = [
   'T0074qItHU8CjVWmIaW5kRrbA@T019-ak0GH9ItR6lUWGm0KgCjVWmIaW5kRrbA@T023vfR3RB8Y8VXKJhj9lP4McIUCjVWmIaW5kRrbA@T0205KkcIXdYpzG_YUO366tjCjVWmIaW5kRrbA',
   'T0074qItHU8CjVWmIaW5kRrbA@T019-ak0GH9ItR6lUWGm0KgCjVWmIaW5kRrbA@T023vfR3RB8Y8VXKJhj9lP4McIUCjVWmIaW5kRrbA@T0205KkcIXdYpzG_YUO366tjCjVWmIaW5kRrbA'
 ];
-const randomCount = $.isNode() ? 0 : 0;
+const randomCount = $.isNode() ? 0 : 5;
 const notify = $.isNode() ? require('./sendNotify') : '';
 let merge = {}
 //IOS等用户直接用NobyDa的jd cookie
