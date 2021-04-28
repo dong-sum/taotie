@@ -42,11 +42,9 @@ cron "10 * * * *" script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd
   let tuanActiveId = `i9ideMF_BUOdVtmbe1pSeA==`;
   const jxOpenUrl = `openjd://virtual?params=%7B%20%22category%22:%20%22jump%22,%20%22des%22:%20%22m%22,%20%22url%22:%20%22https://wqsd.jd.com/pingou/dream_factory/index.html%22%20%7D`;
   let cookiesArr = [], cookie = '', message = '', allMessage = '';
-  const inviteCodes = [
-    'EHLD-QW8SZJ8yucpXq_EwA==@zUq0ZsUJcMEXZlB_6zUOww==@xU3e4Ap6NfU5bAbfw2J9oISveIS2x5vRDJ0S_2fEJdU=',
-    "EHLD-QW8SZJ8yucpXq_EwA==@zUq0ZsUJcMEXZlB_6zUOww==@xU3e4Ap6NfU5bAbfw2J9oISveIS2x5vRDJ0S_2fEJdU=",
-    'EHLD-QW8SZJ8yucpXq_EwA==@zUq0ZsUJcMEXZlB_6zUOww==@xU3e4Ap6NfU5bAbfw2J9oISveIS2x5vRDJ0S_2fEJdU=',
-    'EHLD-QW8SZJ8yucpXq_EwA==@zUq0ZsUJcMEXZlB_6zUOww==@xU3e4Ap6NfU5bAbfw2J9oISveIS2x5vRDJ0S_2fEJdU='
+  const inviteCodes = [//凡凡没有开京喜工厂
+    's12o6imx-zljAF2ZhVGrRA==@***@***',
+    
   ];
   const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
   $.tuanIds = [];
