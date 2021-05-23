@@ -6,7 +6,7 @@
 ### 第二种方式
 * 直接fork本仓库，然后[按照这个教程进行 pull](backUp/gitSync.md)
 
-
+  
 
 ## 特别声明: 
 
